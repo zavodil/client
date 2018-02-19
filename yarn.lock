@@ -6236,6 +6236,18 @@ react-dom@^16.2.0:
     object-assign "^4.1.1"
     prop-types "^15.6.0"
 
+react-electron-web-view@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/react-electron-web-view/-/react-electron-web-view-2.0.1.tgz#984b7bbbeb77e35bcca921dc50120fc8f2b0f27d"
+  dependencies:
+    lodash.camelcase "^4.3.0"
+
+"react-electron-web-view@https://github.com/mhuggins/react-electron-web-view.git":
+  version "2.0.1"
+  resolved "https://github.com/mhuggins/react-electron-web-view.git#1bd7d0ff6cb3a476dc17195c7d3191f34161f905"
+  dependencies:
+    lodash.camelcase "^4.3.0"
+
 react-error-overlay@^4.0.0:
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/react-error-overlay/-/react-error-overlay-4.0.0.tgz#d198408a85b4070937a98667f500c832f86bd5d4"

@@ -1,31 +1,26 @@
-import React from 'react';
 import path from 'path';
+import React from 'react';
+import WebView from 'react-electron-web-view';
 
 import styles from './DAppExample.scss';
 
 export default class DAppExample extends React.Component {
-  componentDidMount() {
-    this.webview.addEventListener('console-message', (e) => {
-      console.log('[DApp]', e.message); // eslint-disable-line no-console
-    });
-  }
-
   render() {
     return (
       <div className={styles.dappExample}>
         <h1>DApp Example</h1>
-        <webview
-          ref={this.registerRef}
+        <WebView
+          className={styles.webview}
           src="dapp.html"
           preload={this.getPreloadPath()}
-          style={{ background: '#fcc', height: '200px' }}
+          onConsoleMessage={this.handleConsoleMessage}
         />
       </div>
     );
   }
 
-  registerRef = (el) => {
-    this.webview = el;
+  handleConsoleMessage = (e) => {
+    console.log('[DApp]', e.message); // eslint-disable-line no-console
   }
 
   getPreloadPath = () => {
