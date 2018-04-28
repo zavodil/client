@@ -107,6 +107,14 @@ function rewireBabel(config, _env) {
   return newConfig;
 }
 
+function injectElectron(config, _env) {
+  return merge(config, {
+    externals: {
+      electron: 'chrome'
+    }
+  });
+}
+
 // function injectHID(config, _env) {
 //   return merge(config, {
 //     externals: {
@@ -120,5 +128,6 @@ module.exports = compose(
   injectSassLoader,
   injectPublicPath,
   rewireBabel,
+  injectElectron,
   // injectHID
 );
