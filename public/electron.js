@@ -92,11 +92,11 @@ function createWindow() {
 app.on('ready', () => {
   registerProtocol();
 
-  if (isDev) {
-    installExtensions().then(createWindow);
-  } else {
-    createWindow();
-  }
+  // if (isDev) {
+  //   installExtensions().then(createWindow);
+  // } else {
+  createWindow();
+  // }
 });
 
 // Quit when all windows are closed.
