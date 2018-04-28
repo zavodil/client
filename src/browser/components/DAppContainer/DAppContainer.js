@@ -1,5 +1,4 @@
 import React from 'react';
-import path from 'path';
 import { shell } from 'electron';
 import { string, func } from 'prop-types';
 
@@ -36,7 +35,6 @@ export default class DAppContainer extends React.Component {
         <webview
           ref={this.registerRef}
           src={this.props.query}
-          preload={this.getPreloadPath()}
           style={{ height: '100%' }}
         />
 
@@ -81,10 +79,5 @@ export default class DAppContainer extends React.Component {
 
   registerRef = (el) => {
     this.webview = el;
-  };
-
-  getPreloadPath = () => {
-    const publicPath = process.env.NODE_ENV === 'production' ? __dirname : process.env.PUBLIC_PATH;
-    return `file:${path.join(publicPath, 'preloadRenderer.js')}`;
   };
 }
