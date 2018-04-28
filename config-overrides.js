@@ -107,12 +107,18 @@ function rewireBabel(config, _env) {
   return newConfig;
 }
 
-function injectHID(config, _env) {
-  return merge(config, {
-    externals: {
-      'node-hid': 'commonjs node-hid'
-    }
-  });
-}
+// function injectHID(config, _env) {
+//   return merge(config, {
+//     externals: {
+//       'node-hid': 'commonjs node-hid'
+//     }
+//   });
+// }
 
-module.exports = compose(injectTarget, injectSassLoader, injectPublicPath, rewireBabel, injectHID);
+module.exports = compose(
+  injectTarget,
+  injectSassLoader,
+  injectPublicPath,
+  rewireBabel,
+  // injectHID
+);
