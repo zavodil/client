@@ -71,7 +71,7 @@
     "codecov": "3.0.2",
     "concurrently": "3.6.0",
     "cross-env": "5.2.0",
-    "css-loader": "0.28.11",
+    "css-loader": "1.0.0",
     "electron": "2.0.4",
     "electron-builder": "20.17.1",
     "electron-devtools-installer": "2.2.4",
